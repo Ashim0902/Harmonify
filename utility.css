@@ -1,0 +1,26 @@
+/*Utility CSS Start*/
+.border {
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+/*Utility CSS Start*/
+
+/*For white color in Font CSS Start*/
+.invert {
+    filter: invert(1);
+}
+/*For white color in Font CSS Start*/
+
+

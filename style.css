@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Reset default margins and paddings for all elements */
+}
+
+body {
+    height: 100vh;
+    /* Full viewport height */
+    color: white;
+    /* Text color */
+    background: radial-gradient(circle, #6d3d8e, #2a5298, #000000);
+    /* Gradient background */
+    font-family: 'Montserrat', sans-serif;
+    /* Font family */
+    transition: background 0.5s ease;
+    /* Smooth transition for background changes */
+}
+
+/* Left-Right container CSS Start */
+.left {
+    width: 35vw;
+    /* Left container takes 35% of the viewport width */
+    padding-left: 20px;
+    /* Padding on the left */
+}
+
+.right {
+    width: 65vw;
+    /* Right container takes 65% of the viewport width */
+}
+
+/* Left-Right container CSS End */
+
+/* Logo CSS Start */
+.logo-image {
+    padding-left: 12px;
+    /* Padding on the left */
+    width: 120px;
+    /* Fixed width for logo */
+    animation: logo-bounce 2s infinite ease-in-out;
+    /* Bounce animation for the logo */
+}
+
+/* Keyframes for logo bounce animation */
+@keyframes logo-bounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Scale to original size at start and end */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale up during the middle of the animation */
+    }
+}
+
+/* Logo CSS End */
+
+/* Navigation buttons CSS Start */
+.home {
+    padding-bottom: 12px;
+    /* Padding at the bottom of the home button */
+}
+
+.nav-button {
+    display: flex;
+    /* Flexbox for aligning items */
+    align-items: center;
+    /* Center align items vertically */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* Text color */
+    background: #ffffff33;
+    /* Semi-transparent background */
+    backdrop-filter: blur(8px);
+    /* Blurring effect for background */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 8px 12px;
+    /* Padding around the button */
+    transition: background 0.3s ease;
+    /* Smooth background transition on hover */
+    width: fit-content;
+    /* Width based on content size */
+}
+
+.nav-button:hover {
+    background: #ffffff66;
+    /* Change background on hover */
+}
+
+.nav-button svg {
+    margin-right: 6px;
+    /* Spacing between icon and text */
+    fill: white;
+    /* Icon color */
+}
+
+.song-lists {
+    display: flex;
+    /* Flexbox layout */
+    align-items: center;
+    /* Center align items */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* Text color */
+    backdrop-filter: blur(8px);
+    /* Blurring effect for background */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 8px 12px;
+    /* Padding around the button */
+    transition: background 0.3s ease;
+    /* Smooth background transition on hover */
+    width: fit-content;
+    /* Width based on content size */
+    padding-left: 0px;
+    /* No left padding */
+}
+
+/* Navigation buttons CSS End */
+
+/* Footer CSS Start */
+.footer {
+    display: flex;
+    /* Flexbox layout for footer */
+    padding: 10px;
+    /* Padding around footer */
+    font-size: 10px;
+    /* Font size for footer text */
+    gap: 13px;
+    /* Space between footer items */
+    position: absolute;
+    /* Positioning footer absolutely */
+    bottom: 0;
+    /* Align footer to the bottom */
+}
+
+.footer a {
+    color: gray;
+    /* Color for footer links */
+}
+
+/* Footer CSS End */
+
+/* Header CSS */
+.header {
+    display: flex;
+    /* Flexbox layout for header */
+    justify-content: space-between;
+    /* Space between header items */
+}
+
+/* Search Box CSS Start */
+.search-container {
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent background */
+    backdrop-filter: blur(8px);
+    /* Blurring effect for background */
+    padding: 10px;
+    /* Padding around search container */
+    border-radius: 25px;
+    /* Rounded corners */
+    display: flex;
+    /* Flexbox for alignment */
+    align-items: center;
+    /* Center align items */
+    width: 500px;
+    /* Fixed width for search container */
+    margin-top: 20px;
+    /* Margin at the top */
+    position: relative;
+    /* Positioning context for child elements */
+}
+
+.search-box {
+    background: transparent;
+    /* Transparent background for input */
+    border: none;
+    /* No border */
+    outline: none;
+    /* No outline on focus */
+    border-radius: 20px;
+    /* Rounded corners */
+    padding: 10px 40px 10px 35px;
+    /* Padding inside the input */
+    font-size: 16px;
+    /* Font size for input */
+    color: #ffffff;
+    /* Text color for input */
+    width: 100%;
+    /* Full width of container */
+}
+
+.search-box::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    /* Placeholder color */
+}
+
+.search-icon {
+    position: absolute;
+    /* Positioning icon absolutely */
+    left: 15px;
+    /* Distance from left */
+    color: #ffffff;
+    /* Icon color */
+    font-size: 18px;
+    /* Icon size */
+    pointer-events: none;
+    /* Disable pointer events for the icon */
+}
+
+.clear-icon {
+    position: absolute;
+    /* Positioning clear icon absolutely */
+    right: 20px;
+    /* Distance from right */
+    color: #ffffff;
+    /* Icon color */
+    font-size: 25px;
+    /* Icon size */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+/* Search Box CSS End */
+
+/* Signin-login button CSS Start */
+.buttons button {
+    margin-top: 30px;
+    /* Margin at the top of button */
+    margin-right: 20px;
+    /* Margin on the right of button */
+}
+
+.sign {
+    padding: 10px 20px;
+    /* Padding inside the sign button */
+    margin-top: 12px;
+    /* Margin at the top */
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent background */
+    color: #ffffff;
+    /* Text color */
+    border: none;
+    /* No border */
+    border-radius: 20px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 500;
+    /* Font weight */
+    cursor: pointer;
+    /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transitions for background and transform */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow for button */
+}
+
+.sign:hover {
+    background: rgba(255, 255, 255, 0.4);
+    /* Change background on hover */
+    color: #ffffff;
+    /* Text color on hover */
+}
+
+.sign:active {
+    transform: scale(0.98);
+    /* Scale down on click */
+    background-color: #000000;
+    /* Background color on click */
+}
+
+.log {
+    padding: 10px 20px;
+    /* Padding inside the login button */
+    margin-top: 12px;
+    /* Margin at the top */
+    background-color: #ffffff;
+    /* Background color */
+    color: rgb(0, 0, 0);
+    /* Text color */
+    border: none;
+    /* No border */
+    border-radius: 20px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 500;
+    /* Font weight */
+    cursor: pointer;
+    /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transitions for background and transform */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Shadow for button */
+}
+
+.log:hover {
+    background-color: #000000;
+    /* Background color on hover */
+    color: #ffffff;
+    /* Text color on hover */
+}
+
+.log:active {
+    transform: scale(0.98);
+    /* Scale down on click */
+    background-color: #000000;
+    /* Background color on click */
+}
+
+/* Signin-login button CSS End */
+
+/* Playlist and SongList CSS Start */
+.songplaylists {
+    padding: 16px;
+    /* Padding around song playlists */
+}
+
+.cardContainer {
+    display: flex;
+    /* Flexbox layout */
+    margin: 30px;
+    /* Margin around container */
+    gap: 15px;
+    /* Space between cards */
+    flex-wrap: wrap;
+    /* Wrap cards if they overflow */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    max-height: 67vh;
+    /* Max height for scrolling */
+}
+
+.card {
+    width: 160px;
+    /* Fixed width for each card */
+    padding: 10px;
+    /* Padding inside card */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #3333;
+    /* Background color for card */
+    position: relative;
+    /* Positioning context for child elements */
+}
+
+.card>* {
+    padding-top: 10px;
+    /* Padding for direct child elements */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+.card img {
+    width: 100%;
+    /* Image takes full width of card */
+    object-fit: contain;
+    /* Maintain aspect ratio */
+}
+
+/* Play button styling inside cards */
+.play {
+    width: 28px;
+    /* Fixed width for play button */
+    height: 28px;
+    /* Fixed height for play button */
+    background-color: #1FDF64;
+    /* Play button color */
+    border-radius: 50%;
+    /* Circle shape */
+    padding: 4px;
+    /* Padding inside play button */
+    display: flex;
+    /* Flexbox for centering */
+    align-items: center;
+    /* Center align items */
+    justify-content: center;
+    /* Center align items */
+    position: absolute;
+    /* Positioning play button absolutely */
+    top: 223px;
+    /* Distance from the top */
+    right: 17px;
+    /* Distance from the right */
+    opacity: 0;
+    /* Initially hidden */
+    transition: all 1s ease-out;
+    /* Smooth transition for visibility */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+.card:hover {
+    background-color: #0000009c;
+    /* Change background on hover */
+    transition: all 1s;
+    /* Smooth transition */
+}
+
+/* Show play button on card hover */
+.card:hover .play {
+    opacity: 1;
+    /* Show play button */
+    top: 160px;
+    /* Move button up */
+}
+
+.play:hover {
+    transform: scale(1.2);
+    /* Scale up play button on hover */
+}
+
+/* Playlist and SongList CSS End */
+
+/* Scroll Bar CSS Start */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff33;
+    /* Background of scrollbar track */
+    border-radius: 5px;
+    /* Rounded corners for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff33;
+    /* Color for scrollbar thumb */
+    border-radius: 5px;
+    /* Rounded corners for scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff33;
+    /* Color for scrollbar thumb on hover */
+}
+
+/* Firefox scrollbar styles */
+* {
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: #ffffff33 #ffffff33;
+    /* Thumb color and track color */
+}
+
+/* Scroll Bar CSS End */
+
+/* Play Bar CSS Start */
+.playbar {
+    position: absolute;
+    /* Positioning play bar absolutely */
+    bottom: 0;
+    /* Align to the bottom */
+    background-color: #000000ad;
+    /* Semi-transparent background */
+    border-radius: 15px;
+    /* Rounded corners */
+    margin-bottom: 20px;
+    /* Margin at the bottom */
+    width: 57%;
+    /* Width of play bar */
+    padding: 18px;
+    /* Padding inside play bar */
+    height: 28px;
+    /* Fixed height */
+}
+
+.songButtons {
+    display: flex;
+    /* Flexbox layout for song buttons */
+    justify-content: center;
+    /* Center align song buttons */
+    gap: 12px;
+    /* Space between song buttons */
+}
+
+.songButtons img {
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+.seekbar {
+    height: 0px;
+    /* No visible height for seek bar */
+    border: 2px solid white;
+    /* Border for seek bar */
+    position: absolute;
+    /* Positioning seek bar absolutely */
+    bottom: 0;
+    /* Align to the bottom */
+    width: 95%;
+    /* Width of seek bar */
+    border-radius: 50px;
+    /* Rounded corners */
+    margin: 6px;
+    /* Margin around seek bar */
+    right: 19px;
+    /* Distance from the right */
+    cursor: pointer;
+    /* Change cursor on hover */
+}
+
+.circle {
+    width: 13px;
+    /* Fixed width for circle */
+    height: 13px;
+    /* Fixed height for circle */
+    border-radius: 50px;
+    /* Circle shape */
+    background-color: white;
+    /* Circle color */
+    position: absolute;
+    /* Positioning circle absolutely */
+    bottom: -5px;
+    /* Distance from the bottom */
+    left: -1%;
+    /* Distance from the left */
+}
+
+.bar {
+    display: flex;
+    /* Flexbox layout for the bar */
+    justify-content: space-between;
+    /* Space between bar items */
+}
+
+/* Play Bar CSS End */
+
+/* Song-List CSS START */
+.Libary-songlist {
+    background-color: #3333;
+    /* Background color for song list */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding-top: 15px;
+    /* Padding at the top */
+    padding-left: 22px;
+    /* Padding on the left */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    max-height: 395px;
+    /* Max height for scrolling */
+}
+
+.Libary-songlist ul {
+    padding-top: 12px;
+    /* Padding at the top of the list */
+}
+
+.Libary-songlist ul li {
+    list-style-type: decimal;
+    /* Decimal list style */
+    display: flex;
+    /* Flexbox layout for list items */
+    cursor: pointer;
+    /* Change cursor on hover */
+    gap: 11px;
+    /* Space between list items */
+    font-size: 13px;
+    /* Font size for list items */
+    justify-content: space-between;
+    /* Space between list item content */
+    border: 1px solid #ffffff;
+    /* Border for list items */
+    margin: 12px 14px 12px 0;
+    /* Margin for list items */
+    padding: 13px;
+    /* Padding inside list items */
+    border-radius: 5px;
+    /* Rounded corners for list items */
+}
+
+.playnow {
+    display: flex;
+    /* Flexbox layout for play now button */
+    align-items: center;
+    /* Center align items */
+    justify-content: center;
+    /* Center align items */
+}
+
+.playnow span {
+    font-size: 12px;
+    /* Font size for play now text */
+    width: 80px;
+    /* Fixed width for text */
+    padding: 5px;
+    /* Padding around text */
+}
+
+.Playall-button {
+    margin-left: 360px;
+    /* Margin on the left */
+    background: #3333;
+    /* Background color */
+    border-color: white;
+    /* Border color */
+    border-radius: 50px;
+    /* Rounded corners */
+    padding: 8px 12px;
+    /* Padding around button */
+}
+
+.Playall-button a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: white;
+    /* Text color for links */
+}
+
+.Playall-button:hover {
+    background-color: rgba(0, 0, 0, 0.212);
+    /* Change background on hover */
+    padding: 9px 14px 10px 14px;
+    /* Increase padding on hover */
+}
+/* Song-List CSS End */
+
+
